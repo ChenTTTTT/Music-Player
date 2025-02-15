@@ -1,0 +1,70 @@
+.main{
+    width: 24.375rem;
+    height: 52.75rem;
+    border-radius: 3.9375rem;
+    background-color: black;
+}
+
+.mainContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.topContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: .625rem 1.25rem .4375rem 1.25rem;
+}
+
+h1{
+    color: white;
+    font-size: 1.25rem;
+    font-family: 'Segoe UI';
+    font-weight: normal;
+}
+
+.mainImageContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#mainImage1{
+    position: relative;
+}
+
+#mainImage2{
+    position: absolute;
+    top: .9375rem;
+}
+
+.playingSongContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 3.75rem 0 3.75rem;
+}
+
+.playingSongNameContainer{
+    display: flex;
+    flex-direction: column;
+    gap: .3125rem;
+}
+
+#playingSongName{
+    color: white;
+    font-size: 1.125rem;
+    font-family:'Segoe UI';
+    font-weight: normal;
+}
+
+#playingSongArtist{
+    color: white;
+    font-size: .625rem;
+    font-family:'Segoe UI';
+    font-weight: lighter;
+}
