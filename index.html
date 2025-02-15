@@ -21,11 +21,106 @@
             <div class="playingSongContainer">
                 <div class="playingSongNameContainer">
                     <div id="playingSongName"> On My Way </div>
-                    <div id="playingSongArtist"> Allen Walker </div>
+                    <div id="playingSongArtist"> Allen walker </div>
                 </div>
                 <img src="images/share downlod fav.png" alt="share_download_fav">
             </div>
+            <div class="playingTimerContainer">
+                <div id="currentTime"> 01:23 </div>
+                <div class="playingSliderContainer">
+                    <input type="range" min="0" max="100" value="38.785" id="slider" id="myRange">
+                    <div id="progressBar"></div>
+                </div>
+                <div id="maxTime"> 03:34 </div>
+            </div>
+            <div class="playingButtonsContainer">
+                <img src="images/cil_loop.png" alt="loop_button">
+                <img id="previousButton" src="images/previous_arrow.png" alt="previous_button">
+                <div class="playButtonContainer">
+                    <img id="playButton1" src="images/play blur.png" alt="play_blur">
+                    <img id="playButton2" src="images/Play_circle.png" alt="play_button">
+                    <img id="playButton3" src="images/play.png" alt="play_arrow">
+                </div>
+                <img id="nextButton" src="images/next_arrow.png" alt="next_button">
+                <img src="images/Group.png" alt="group_button">
+            </div>
+            <div class="upNextContainer">
+                <div id="upNextText"> Up next </div>
+                <div class="viewAllContainer">
+                    <div id="viewAllText"> View All </div>
+                    <img src="images/ep_arrow-right.png" alt="view_all_button">
+                </div>
+            </div>
+            <div class="nextSliderContainer">
+                <div class="nextSongContainer">
+                    <img src="images/song_1.png" alt="song_1_img">
+                    <div class="nextSongNameContainer">
+                        <div id="nextSongName"> Ranjhna </div>
+                        <div id="nextSongArtistName"> B Park </div>
+                    </div>
+                    <img src="images/akar-icons_heart.png" alt="heart_img">
+                    <img src="images/three_dots.png" alt="info_img">
+                </div>
+                <div class="nextSongContainer">
+                    <img src="images/song_2.png" alt="song_2_img">
+                    <div class="nextSongNameContainer">
+                        <div id="nextSongName"> Barish </div>
+                        <div id="nextSongArtistName"> Barish </div>
+                    </div>
+                    <img src="images/akar-icons_heart.png" alt="heart_img">
+                    <img src="images/three_dots.png" alt="info_img">
+                </div>
+                <div class="nextSongContainer">
+                    <img src="images/song_3.png" alt="song_3_img">
+                    <div class="nextSongNameContainer">
+                        <div id="nextSongName"> Bom Diggi Bom Bom </div>
+                        <div id="nextSongArtistName"> </div>
+                    </div>
+                    <img src="images/akar-icons_heart.png" alt="heart_img">
+                    <img src="images/three_dots.png" alt="info_img">
+                </div>
+                <div class="nextSongContainer">
+                    <img src="images/song_4.png" alt="song_4_img">
+                    <div class="nextSongNameContainer">
+                        <div id="nextSongName"> Filhall </div>
+                        <div id="nextSongArtistName"> B Park-Filhall </div>
+                    </div>
+                    <img src="images/akar-icons_heart.png" alt="heart_img">
+                    <img src="images/three_dots.png" alt="info_img">
+                </div>
+            </div>
+            <div class="bottomContainer">
+                <img src="images/bxs_home-circle.png" alt="home_button">
+                <img src="images/akar-icons_heart.png" alt="heart_button">
+                <img src="images/download.png" alt="download_button">
+                <img src="images/ep_setting.png" alt="settings_button">
+            </div>
         </div>
     </div>
+
+    <script>
+        var slider = document.getElementById("slider");
+        var progressBar = document.getElementById("progressBar");
+        var currentTime = document.getElementById("currentTime");
+
+        var _actualcurrentTime = 0;
+        var _actualMaxTime = 214;
+
+        function secondsToDigitalTime(seconds) {
+            let minutes = Math.floor(seconds / 60);
+            let secs = seconds % 60;
+            
+            let formattedMinutes = String(minutes).padStart(2, '0');
+            let formattedSeconds = String(secs).padStart(2, '0');
+            
+            return `${formattedMinutes}:${formattedSeconds}`;
+        }
+
+        slider.oninput = function() {
+            progressBar.style.width = this.value + "%";
+            _actualcurrentTime = Math.floor(_actualMaxTime * (this.value / 100));
+            currentTime.innerHTML = secondsToDigitalTime(_actualcurrentTime);
+        }
+    </script>
 </body>
 </html>
