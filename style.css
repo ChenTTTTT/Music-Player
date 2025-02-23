@@ -3,6 +3,12 @@ img {
   pointer-events: none;
 }
 
+.backgroundContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .main{
     width: 24.375rem;
     height: 52.75rem;
