@@ -224,11 +224,19 @@ h1{
 .nextSliderContainer{
     display: flex;
     flex-direction: column;
-    height: 210px;
-    overflow:auto;
-    margin: 2rem 2rem 0 2rem;
-    gap: 25px;
+    height: 203px;
     overflow: hidden;
+    margin: 2rem 2rem 0 2rem;
+}
+
+.nextSliderContainerChild{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    gap: 25px;
+    padding-right: 17px;
 }
 
 .nextSongContainer{
@@ -266,7 +274,7 @@ h1{
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    height: 58px;
+    height: 65px;
     gap: 45px;
     background-color: #232728;
     border-radius: 0 0 3.9375rem 3.9375rem;
@@ -280,7 +288,7 @@ h1{
     gap: 1px;
 }
 
-#bottomButtonIndicator{
+.bottomButtonContainer > div{
     background-color: white;
     border-radius: 50%;
     width: 4px;
