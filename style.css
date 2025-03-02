@@ -226,7 +226,7 @@ h1{
     flex-direction: column;
     height: 203px;
     overflow: hidden;
-    margin: 2rem 2rem 0 2rem;
+    margin: 2rem .9375rem 0 2rem;
 }
 
 .nextSliderContainerChild{
